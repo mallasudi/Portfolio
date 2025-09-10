@@ -116,6 +116,30 @@ export default function App() {
         </div>
       </section>
 
+      {/* Certifications Section */}
+      <section id="certifications" className="py-20 px-6">
+        <h2 className="text-3xl font-bold text-center mb-10">Certifications</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {[
+            { title: "AWS Academy Cloud Foundations", provider: "AWS Academy" },
+            { title: "AWS Academy Machine Learning Foundations", provider: "AWS Academy" },
+            { title: "AWS ML for NLP", provider: "AWS Academy" },
+            { title: "AWS Data Engineering", provider: "AWS Academy" },
+          ].map((cert, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.05, rotate: 1 }}
+              className="p-6 bg-gray-700 rounded-lg shadow hover:shadow-pink-500/50 transition"
+            >
+              <h3 className="text-xl font-semibold">{cert.title}</h3>
+              <p className="text-pink-400">{cert.provider}</p>
+              {cert.year && <p className="text-gray-400 text-sm">{cert.year}</p>}
+            </motion.div>
+           ))}
+        </div>
+      </section>
+
+
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 text-center">
         <motion.h2
