@@ -11,6 +11,7 @@ export default function App() {
           <a href="#about" className="hover:text-pink-400 transition">About</a>
           <a href="#skills" className="hover:text-pink-400 transition">Skills</a>
           <a href="#projects" className="hover:text-pink-400 transition">Projects</a>
+          <a href="#certifications" className="hover:text-pink-400 transition">Certifications</a>
           <a href="#contact" className="hover:text-pink-400 transition">Contact</a>
         </div>
       </nav>
@@ -31,8 +32,16 @@ export default function App() {
           transition={{ delay: 0.5, duration: 1 }}
           className="text-xl md:text-2xl max-w-2xl"
         >
-          Frontend Developer & BSc Hons Computing Student passionate about
-          building stunning digital experiences.
+          Full Stack Developer & BSc Hons Computing Student
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 1 }}
+          className="mt-4 text-lg max-w-2xl text-white/80"
+        >
+          Passionate about building scalable full-stack applications with a focus on modern web
+          technologies and user experience.
         </motion.p>
       </section>
 
@@ -52,9 +61,9 @@ export default function App() {
           transition={{ delay: 0.3, duration: 1 }}
           className="max-w-3xl mx-auto"
         >
-          I’m a student at Islington College, with strong skills in HTML, CSS,
-          JavaScript, and growing expertise in React. I love crafting user-friendly
-          interfaces with a touch of creativity and problem-solving.
+          I’m a student at Islington College with strong skills in Java, Python, JavaScript, React,
+          and Tailwind. I love crafting user-friendly applications and solving complex problems with
+          full-stack technologies.
         </motion.p>
       </section>
 
@@ -62,7 +71,7 @@ export default function App() {
       <section id="skills" className="py-20 px-6">
         <h2 className="text-3xl font-bold text-center mb-10">Skills</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto text-center">
-          {["Java", "Python", "React", "JavaScript", "SQL", "Tailwind"].map(
+          {["Java", "Python", "React", "JavaScript", "SQL", "Tailwind", "Node.js"].map(
             (skill, i) => (
               <motion.div
                 key={i}
@@ -119,12 +128,12 @@ export default function App() {
       {/* Certifications Section */}
       <section id="certifications" className="py-20 px-6">
         <h2 className="text-3xl font-bold text-center mb-10">Certifications</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {[
-            { title: "AWS Academy Cloud Foundations", provider: "AWS Academy" },
-            { title: "AWS Academy Machine Learning Foundations", provider: "AWS Academy" },
-            { title: "AWS ML for NLP", provider: "AWS Academy" },
-            { title: "AWS Data Engineering", provider: "AWS Academy" },
+            { title: "AWS Academy Cloud Foundations", url: "https://www.credly.com/go/C4C6Z54J" },
+            { title: "AWS Academy Machine Learning Foundations", url: "https://www.credly.com/go/49rJNqO6" },
+            { title: "AWS Academy ML for NLP", url: "https://www.credly.com/go/49rJNqO6" },
+            { title: "AWS Academy Data Engineering", url: "https://www.credly.com/go/1weSjqNt" },
           ].map((cert, i) => (
             <motion.div
               key={i}
@@ -132,13 +141,17 @@ export default function App() {
               className="p-6 bg-gray-700 rounded-lg shadow hover:shadow-pink-500/50 transition"
             >
               <h3 className="text-xl font-semibold">{cert.title}</h3>
-              <p className="text-pink-400">{cert.provider}</p>
-              {cert.year && <p className="text-gray-400 text-sm">{cert.year}</p>}
+              <a
+                href={cert.url}
+                target="_blank"
+                className="text-pink-400 underline mt-2 inline-block"
+              >
+                View Certificate
+              </a>
             </motion.div>
-           ))}
+          ))}
         </div>
       </section>
-
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 text-center">
