@@ -32,7 +32,7 @@ export default function App() {
           transition={{ delay: 0.5, duration: 1 }}
           className="text-xl md:text-2xl max-w-2xl"
         >
-          Full Stack Developer & BSc Hons Computing Student
+          Full Stack Developer • AI & Data Enthusiast
         </motion.p>
         <motion.p
           initial={{ opacity: 0 }}
@@ -40,8 +40,7 @@ export default function App() {
           transition={{ delay: 1, duration: 1 }}
           className="mt-4 text-lg max-w-2xl text-white/80"
         >
-          Passionate about building scalable full-stack applications with a focus on modern web
-          technologies and user experience.
+          Passionate about AI-driven applications, data analysis, and building intelligent systems that combine full-stack development with modern machine learning concepts.
         </motion.p>
       </section>
 
@@ -61,9 +60,7 @@ export default function App() {
           transition={{ delay: 0.3, duration: 1 }}
           className="max-w-3xl mx-auto"
         >
-          I’m a student at Islington College with strong skills in Java, Python, JavaScript, React,
-          and Tailwind. I love crafting user-friendly applications and solving complex problems with
-          full-stack technologies.
+          I’m a BSc Hons Computing student with strong skills in Java, Python, React, and data analysis. I enjoy building full-stack applications and exploring AI concepts such as NLP, automation, and AI-driven insights. My goal is to integrate intelligent features into real-world systems that enhance user experience and decision-making.
         </motion.p>
       </section>
 
@@ -71,7 +68,7 @@ export default function App() {
       <section id="skills" className="py-20 px-6">
         <h2 className="text-3xl font-bold text-center mb-10">Skills</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto text-center">
-          {["Java", "Python", "React", "JavaScript", "SQL", "Tailwind", "Node.js"].map(
+          {["Java", "Python", "React", "JavaScript", "SQL", "Tailwind", "Node.js", "NLP Basics", "Pandas", "Data Analysis"].map(
             (skill, i) => (
               <motion.div
                 key={i}
@@ -105,6 +102,14 @@ export default function App() {
             {
               name: "Customer Service Request Analysis",
               link: "https://github.com/mallasudi/Data-Analysis.git",
+            },
+            {
+              name: "Bank Help Desk",
+              link: "https://github.com/mallasudi/Bank-Help-Desk.git",
+            },
+            {
+              name: "Smart School",
+              link: "https://github.com/mallasudi/Smart-School.git",
             },
           ].map((project, i) => (
             <motion.div
@@ -176,7 +181,7 @@ export default function App() {
           </a>{" "}
           |{" "}
           <a
-            href="https://www.linkedin.com/feed/"
+            href="https://www.linkedin.com/in/suniti-malla-b93364375/"
             target="_blank"
             className="text-pink-400 underline"
           >
